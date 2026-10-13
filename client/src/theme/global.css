@@ -1,0 +1,242 @@
+@import './tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  background: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--n-200);
+  border-radius: 5px;
+  border: 2px solid var(--bg-app);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--n-300); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* 品牌印章 */
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--brand-vermilion-500);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 2px;
+  transform: rotate(-4deg);
+}
+
+/* Ant Design modal polish */
+.ant-modal .ant-modal-content,
+.ant-modal-confirm .ant-modal-content {
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-2);
+  box-shadow: var(--shadow-xl);
+}
+
+.ant-modal .ant-modal-header {
+  padding: 18px 22px 14px;
+  margin: 0;
+  border-bottom: 1px solid var(--border-2);
+}
+
+.ant-modal .ant-modal-title,
+.ant-modal-confirm-title {
+  color: var(--fg-1) !important;
+  font: 700 17px var(--font-sans) !important;
+}
+
+.ant-modal .ant-modal-body {
+  padding: 22px;
+}
+
+.ant-modal .ant-modal-footer {
+  margin: 0;
+  padding: 14px 22px 18px;
+  border-top: 1px solid var(--border-2);
+}
+
+.ant-modal .ant-modal-close {
+  top: 15px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  color: var(--fg-3);
+  background: var(--n-50);
+}
+
+.ant-modal-confirm .ant-modal-body {
+  padding: 22px;
+}
+
+.ant-modal-confirm .ant-modal-confirm-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ant-modal-confirm .ant-modal-confirm-body {
+  align-items: flex-start;
+}
+
+.ant-modal-confirm .ant-modal-confirm-content {
+  color: var(--fg-2);
+  font: var(--type-body);
+  margin-top: 8px;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.ant-modal .ant-btn,
+.ant-modal-confirm .ant-btn {
+  border-radius: 6px;
+  font: 600 13px var(--font-sans);
+  min-width: 72px;
+}
+
+/* Shared product UI primitives */
+.ui-page {
+  padding: 24px 28px 40px;
+  max-width: 1760px;
+  margin: 0 auto;
+}
+
+.ui-surface {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-3);
+  box-shadow: var(--shadow-xs);
+}
+
+.ui-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+}
+
+.ui-btn {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: var(--r-2);
+  border: 1px solid var(--border-1);
+  background: #fff;
+  color: var(--fg-2);
+  font: 600 13px var(--font-sans);
+  cursor: pointer;
+  transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.ui-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+  color: var(--fg-1);
+}
+
+.ui-btn-primary {
+  border-color: var(--brand-teal-500);
+  background: var(--brand-teal-500);
+  color: #fff;
+}
+
+.ui-btn-primary:hover {
+  border-color: var(--brand-teal-600);
+  background: var(--brand-teal-600);
+  color: #fff;
+}
+
+.ui-btn-danger {
+  border-color: var(--color-danger-fg);
+  background: var(--color-danger-fg);
+  color: #fff;
+}
+
+.ui-icon-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--r-2);
+  border: 1px solid var(--border-1);
+  background: #fff;
+  color: var(--fg-2);
+  cursor: pointer;
+  transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast);
+}
+
+.ui-icon-btn:hover {
+  background: var(--bg-hover);
+  color: var(--fg-1);
+}
+
+.ui-input {
+  height: 32px;
+  width: 100%;
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-2);
+  background: #fff;
+  color: var(--fg-1);
+  font: var(--type-body);
+  outline: none;
+  transition: border-color var(--dur-fast), box-shadow var(--dur-fast), background var(--dur-fast);
+}
+
+.ui-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-focus);
+}
+
+.ui-chip {
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 9px;
+  border-radius: var(--r-2);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--fg-2);
+  font: 500 12px var(--font-sans);
+  cursor: pointer;
+}
+
+.ui-chip-active {
+  border-color: var(--brand-teal-500);
+  background: var(--brand-teal-50);
+  color: var(--brand-teal-600);
+}
+
+.ui-muted {
+  color: var(--fg-3);
+}

@@ -1,0 +1,52 @@
+node_modules/
+dist/
+.mysql-data*/
+.mysql-*/
+.mysql-runtime-data/
+.mysql-local-data/
+.env
+*.log
+.claude/
+.codex-logs/
+.codex-tmp/
+.yft-ref/
+*.zip
+归档.md
+server/uploads/originals/*
+server/uploads/thumbnails/*
+server/uploads/parsed/*
+server/uploads/exports/*
+server/uploads/cutouts/*
+server/uploads/fonts/*
+# Imgly background-removal SDK assets are downloaded by _download.mjs at deploy time.
+# Keep the script and resource manifest in git; ignore the binary chunks it produces.
+server/uploads/imgly/*
+!server/uploads/imgly/_download.mjs
+!server/uploads/imgly/resources.json
+!server/uploads/**/.gitkeep
+# TypeScript incremental build cache
+*.tsbuildinfo
+# Local deployment copy of the source tree
+/benlai-design/
+
+# Local configuration and runtime data.
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+!**/*.env.example
+*.sqlite*
+*.db
+*.db-*
+*.pem
+*.key
+*.pfx
+screenshots/
+server/uploads/
+!server/uploads/imgly/
+!server/uploads/imgly/_download.mjs
+!server/uploads/imgly/resources.json
+.codex-verification/
+tmp/
+tmp-parser-check/
